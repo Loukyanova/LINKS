@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINKS</title>
+</head>
+
+<body style="padding: 3%;">
+
+    <style>
+        div {
+            display: inline;
+            font-size: 20px;
+        }
+
+        div a {
+            padding: 5px;
+            color: green;
+        }
+
+        div a:hover {
+            color: red;
+        }
+
+        div.links a {
+            border-left: 3px solid red;
+            margin-right: -5px;
+            margin-left: 4px;
+            padding: 8px;
+        }
+
+        div.links a:first-child {
+            border-left: hidden;
+        }
+
+        /* ссылки в строку спомощью свойства DISPLAY */
+        div.links_2 a {
+            display: inline;
+        }
+
+        div.links_2 a:not(:last-child)::after {
+            content: " ";
+            display: inline-block;
+            background: red;
+            width: 3px;
+            height: 35px;
+            margin-left: 15px;
+            margin-right: 0px;
+            vertical-align: -13px;
+        }
+
+        div.links_3 a {
+            display: inline;
+        }
+
+        div.links_3 a:not(:first-child)::before {
+            content: " ";
+            display: inline-block;
+            background: red;
+            width: 3px;
+            height: 35px;
+            margin-right: 15px;
+            vertical-align: -13px;
+
+        }
+
+        /* ссылки в строку спомощью таблицы */
+
+        tr td:not(:last-child) {
+            border-right: 3px solid red;
+            height: 33px;
+            padding: 4px;
+        }
+    </style>
+
+    <div class="links_2">
+        <a href="">первая ссылка</a>
+        <a href="">вторая ссылка</a>
+        <a href="">третья ссылка</a>
+        <a href="">четвёртая ссылка</a>
+        <a href="">пятая ссылка</a>
+    </div>
+    <br>
+    <br>
+    <div class="links_3">
+        <a href="">первая ссылка</a>
+        <a href="">вторая ссылка</a>
+        <a href="">третья ссылка</a>
+        <a href="">четвёртая ссылка</a>
+        <a href="">пятая ссылка</a>
+    </div>
+    <br>
+    <br>
+    <div class="links">
+        <a href="">первая ссылка</a>
+        <a href="">вторая ссылка</a>
+        <a href="">третья ссылка</a>
+        <a href="">четвёртая ссылка</a>
+        <a href="">пятая ссылка</a>
+    </div>
+    <br>
+    <br>
+    <div class="links_4">
+        <table>
+            <tr>
+                <td><a href="">первая ссылка</a></td>
+                <td><a href="">вторая ссылка</a></td>
+                <td><a href="">третья ссылка</a></td>
+                <td><a href="">четвёртая ссылка</a></td>
+                <td><a href="">пятая ссылка</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
